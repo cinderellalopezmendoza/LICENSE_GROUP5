@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/mainbg">
+
+    <RelativeLayout
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:id="@+id/INFO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IDENTIFICATION INFORMATION"
+            android:layout_centerHorizontal="true"
+            android:textColor="#191970"
+            android:background="#FFFAF0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/INFO"
+            android:layout_height="5dp"
+            android:background="#191970"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/infobox">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lnameC"
+            android:layout_marginTop="20dp"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lname"
+                android:textSize="15sp"
+                android:layout_width="180dp"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:hint="LAST NAME" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fnameC"
+            android:layout_marginTop="20dp"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="210dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fname"
+                android:textSize="15sp"
+                android:layout_width="180dp"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:hint="FIRST NAME" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/lnameC"
+            android:id="@+id/mnameC"
+            android:layout_marginTop="20dp"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mname"
+                android:textSize="15sp"
+                android:layout_width="180dp"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:hint="MIDDLE NAME" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/fnameC"
+            android:id="@+id/NnameC"
+            android:layout_marginTop="20dp"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="210dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nationality"
+                android:textSize="15sp"
+                android:layout_width="180dp"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:hint="NATIONALITY" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mnameC"
+            android:id="@+id/sexText"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="15sp"
+            android:text="Sex"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@+id/sexText"
+            android:id="@+id/sexC"
+            android:layout_marginLeft="15dp"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            app:helperTextEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sex"
+                android:textSize="15sp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:hint="F or M" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mnameC"
+            android:layout_toRightOf="@+id/sexText"
+            android:layout_marginLeft="60dp"
+            android:id="@+id/WeightText"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:text="Weight"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@+id/WeightText"
+            android:layout_toRightOf="@id/sexC"
+            android:id="@+id/WeightC"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:helperTextEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textSize="15sp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:id="@+id/weight"
+                android:hint="Kg" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mnameC"
+            android:layout_toRightOf="@+id/WeightText"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/heightText"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:text="Height"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@+id/heightText"
+            android:layout_toRightOf="@id/WeightC"
+            android:id="@+id/heightC"
+            android:layout_width="85dp"
+            android:layout_height="60dp"
+            app:helperTextEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/height"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="15sp"
+                android:hint="Cm"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mnameC"
+            android:layout_toRightOf="@+id/heightText"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/bdaytext"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:text="Date of birth"/>
+
+        <ImageView
+            android:layout_below="@+id/bdaytext"
+            android:layout_toRightOf="@+id/heightC"
+            android:id="@+id/bday"
+            android:src="@drawable/birthcalendar"
+            android:layout_width="50dp"
+            android:layout_height="60dp"/>
+        <TextView
+            android:layout_below="@+id/bdaytext"
+            android:layout_toRightOf="@+id/bday"
+            android:id="@+id/bdayPicked"
+            android:gravity="bottom"
+            android:hint="Click the icon"
+            android:textSize="12sp"
+            android:paddingBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+        <View
+            android:layout_below="@+id/bdayPicked"
+            android:layout_toRightOf="@+id/bday"
+            android:text="1653/70/25"
+            android:textSize="10sp"
+            android:background="#191970"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sexC"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/addressText"
+            android:textSize="15sp"
+            android:text="Address"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ViewAddress"
+            android:layout_below="@+id/addressText">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/brgyC"
+                    android:layout_width="95dp"
+                    android:layout_height="60dp"
+                    app:helperTextEnabled="true"
+                    android:layout_marginLeft="5dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:textSize="11sp"
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:id="@+id/brgy"
+                        android:hint="Brgy." />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_toRightOf="@id/brgyC"
+                    android:id="@+id/munC"
+                    android:layout_width="115dp"
+                    android:layout_height="60dp"
+                    app:helperTextEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:textSize="10sp"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:id="@+id/mun"
+                        android:hint="Municipality" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_toRightOf="@id/munC"
+                    android:id="@+id/cityC"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    app:helperTextEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:textSize="11sp"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:id="@+id/city"
+                        android:hint="City" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_toRightOf="@id/cityC"
+                    android:id="@+id/provineC"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    app:helperTextEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:textSize="11sp"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:id="@+id/province"
+                        android:hint="Province" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingBottom="15dp"
+            android:layout_below="@+id/ViewAddress">
+
+            <!--Image view in which image will be set-->
+            <ImageView
+                android:id="@+id/image_view"
+                android:background="@drawable/ic_image"
+                android:layout_alignParentTop="true"
+                android:layout_width="115dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"/>
+
+            <!--Button to capture Image-->
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:id="@+id/btn_capture"
+                android:text="Capture Image"
+                android:textSize="20sp"
+                android:backgroundTint="#191970"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/image_view"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/eyesC"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="20dp"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/eyescolor"
+                    android:textSize="13sp"
+                    android:layout_width="110dp"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Eyes Color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/btypeC"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/btype"
+                android:textSize="13sp"
+                android:layout_width="110dp"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:hint="Blood Type" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/btn_capture"
+                android:layout_height="3dp"
+                android:background="#191970"
+                android:id="@+id/line"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/line"
+                android:id="@+id/regBtn"
+                android:text="Register"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:backgroundTint="#00FF7F" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/regBtn"
+                android:layout_height="3dp"
+                android:background="#191970"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
